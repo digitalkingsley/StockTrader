@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.9.0" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="2.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="Moq" Version="4.7.63" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+
+
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="1.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="1.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="1.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="1.1.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StockTrader.Model\StockTrader.Model.csproj" />
+    <ProjectReference Include="..\StockTrader.Service\StockTrader.Service.csproj" />
+    <ProjectReference Include="..\StockTrader\StockTrader.csproj" />
+  </ItemGroup>
+
+
+  
+  
+</Project>
