@@ -1,0 +1,12 @@
+C:\StockTrader\StockTrader\StockTrader.Service\bin\Debug\netcoreapp1.1\StockTrader.Service.deps.json
+C:\StockTrader\StockTrader\StockTrader.Service\bin\Debug\netcoreapp1.1\StockTrader.Service.dll
+C:\StockTrader\StockTrader\StockTrader.Service\bin\Debug\netcoreapp1.1\StockTrader.Service.pdb
+C:\StockTrader\StockTrader\StockTrader.Service\bin\Debug\netcoreapp1.1\StockTrader.Model.dll
+C:\StockTrader\StockTrader\StockTrader.Service\bin\Debug\netcoreapp1.1\StockTrader.Model.pdb
+C:\StockTrader\StockTrader\StockTrader.Service\obj\Debug\netcoreapp1.1\StockTrader.Service.AssemblyInfo.cs
+C:\StockTrader\StockTrader\StockTrader.Service\obj\Debug\netcoreapp1.1\StockTrader.Service.dll
+C:\StockTrader\StockTrader\StockTrader.Service\obj\Debug\netcoreapp1.1\StockTrader.Service.pdb
+C:\StockTrader\StockTrader\StockTrader.Service\obj\Debug\netcoreapp1.1\StockTrader.Service.csprojAssemblyReference.cache
+C:\StockTrader\StockTrader\StockTrader.Service\obj\Debug\netcoreapp1.1\StockTrader.Service.csproj.CoreCompileInputs.cache
+C:\StockTrader\StockTrader\StockTrader.Service\obj\Debug\netcoreapp1.1\StockTrader.Service.AssemblyInfoInputs.cache
+C:\StockTrader\StockTrader\StockTrader.Service\obj\Debug\netcoreapp1.1\StockTrader.Service.csproj.CopyComplete
