@@ -18,6 +18,10 @@ namespace StockTrader.StockTrader_Model
         //}
         public StockTraderContext(DbContextOptions<StockTraderContext> options) : base(options) { }
 
+        public StockTraderContext()
+        {
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Stock>(entity =>
