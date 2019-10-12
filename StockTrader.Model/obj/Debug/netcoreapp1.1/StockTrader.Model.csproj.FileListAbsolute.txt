@@ -6,3 +6,4 @@ C:\StockTrader\StockTrader\StockTrader.Model\obj\Debug\netcoreapp1.1\StockTrader
 C:\StockTrader\StockTrader\StockTrader.Model\obj\Debug\netcoreapp1.1\StockTrader.Model.pdb
 C:\StockTrader\StockTrader\StockTrader.Model\obj\Debug\netcoreapp1.1\StockTrader.Model.csproj.CoreCompileInputs.cache
 C:\StockTrader\StockTrader\StockTrader.Model\obj\Debug\netcoreapp1.1\StockTrader.Model.AssemblyInfoInputs.cache
+C:\StockTrader\StockTrader\StockTrader.Model\obj\Debug\netcoreapp1.1\StockTrader.Model.csprojAssemblyReference.cache

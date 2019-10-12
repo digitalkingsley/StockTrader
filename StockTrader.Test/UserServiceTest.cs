@@ -13,13 +13,13 @@ namespace StockTrader.Test
 {
     public class UserServiceTest
     {
-        //Create and return a Context to work with the InMemory Db the Test Class
-        //and ensure that the Db is recreated for each test run.
-        private StockTraderContext GetContextWithSomeData()
+        //Seed the InMemory Db with data
+   
+        private StockTraderContext SeedContextWithSomeData()
         {
             var options = new DbContextOptionsBuilder<StockTraderContext>()
-                              .UseInMemoryDatabase(Guid.NewGuid().ToString())
-                              .Options;
+                   .UseInMemoryDatabase(Guid.NewGuid().ToString())
+                   .Options;
             var context = new StockTraderContext(options);
 
             //Add some Seed data to the Db
@@ -45,10 +45,10 @@ namespace StockTrader.Test
         public void Register_User()
         {
 
-            var context = GetContextWithSomeData();
+            var theContext = SeedContextWithSomeData();
 
             Mock<TransactionService> transactionServiceMock = new Mock<TransactionService>();
-            UserService userService = new UserService(context, transactionServiceMock.Object);
+            UserService userService = new UserService(theContext, transactionServiceMock.Object);
 
             //Create a User Object to be authenticated
             var userToAuthenticate = new User

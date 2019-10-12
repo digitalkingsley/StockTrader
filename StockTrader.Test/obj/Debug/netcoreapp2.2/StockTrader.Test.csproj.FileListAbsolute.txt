@@ -20,4 +20,3 @@ C:\StockTrader\StockTrader\StockTrader.Test\bin\Debug\netcoreapp2.2\StockTrader.
 C:\StockTrader\StockTrader\StockTrader.Test\obj\Debug\netcoreapp2.2\StockTrader.Test.csproj.CopyComplete
 C:\StockTrader\StockTrader\StockTrader.Test\obj\Debug\netcoreapp2.2\StockTrader.Test.dll
 C:\StockTrader\StockTrader\StockTrader.Test\obj\Debug\netcoreapp2.2\StockTrader.Test.pdb
-C:\StockTrader\StockTrader\StockTrader.Test\bin\Debug\netcoreapp2.2\appsettings.json
