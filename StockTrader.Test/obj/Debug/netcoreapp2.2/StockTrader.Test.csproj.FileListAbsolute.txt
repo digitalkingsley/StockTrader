@@ -9,3 +9,15 @@ C:\StockTrader\StockTrader\StockTrader.Test\obj\Debug\netcoreapp2.2\StockTrader.
 C:\StockTrader\StockTrader\StockTrader.Test\obj\Debug\netcoreapp2.2\StockTrader.Test.csproj.CoreCompileInputs.cache
 C:\StockTrader\StockTrader\StockTrader.Test\obj\Debug\netcoreapp2.2\StockTrader.Test.AssemblyInfoInputs.cache
 C:\StockTrader\StockTrader\StockTrader.Test\obj\Debug\netcoreapp2.2\StockTrader.Test.AssemblyInfo.cs
+C:\StockTrader\StockTrader\StockTrader.Test\bin\Debug\netcoreapp2.2\StockTrader.Test.pdb
+C:\StockTrader\StockTrader\StockTrader.Test\bin\Debug\netcoreapp2.2\StockTrader.dll
+C:\StockTrader\StockTrader\StockTrader.Test\bin\Debug\netcoreapp2.2\StockTrader.Model.dll
+C:\StockTrader\StockTrader\StockTrader.Test\bin\Debug\netcoreapp2.2\StockTrader.Service.dll
+C:\StockTrader\StockTrader\StockTrader.Test\bin\Debug\netcoreapp2.2\StockTrader.Model.pdb
+C:\StockTrader\StockTrader\StockTrader.Test\bin\Debug\netcoreapp2.2\StockTrader.Service.pdb
+C:\StockTrader\StockTrader\StockTrader.Test\bin\Debug\netcoreapp2.2\StockTrader.pdb
+C:\StockTrader\StockTrader\StockTrader.Test\bin\Debug\netcoreapp2.2\StockTrader.xml
+C:\StockTrader\StockTrader\StockTrader.Test\obj\Debug\netcoreapp2.2\StockTrader.Test.csproj.CopyComplete
+C:\StockTrader\StockTrader\StockTrader.Test\obj\Debug\netcoreapp2.2\StockTrader.Test.dll
+C:\StockTrader\StockTrader\StockTrader.Test\obj\Debug\netcoreapp2.2\StockTrader.Test.pdb
+C:\StockTrader\StockTrader\StockTrader.Test\bin\Debug\netcoreapp2.2\appsettings.json
