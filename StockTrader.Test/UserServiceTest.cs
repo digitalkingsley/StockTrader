@@ -42,7 +42,7 @@ namespace StockTrader.Test
         }
 
         [Fact(DisplayName = "Method should return a registered user")]
-        public void Register_User()
+        public void Authenticate_User()
         {
 
             var theContext = SeedContextWithSomeData();
