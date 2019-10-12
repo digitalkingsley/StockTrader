@@ -27,7 +27,6 @@ namespace StockTrader.Controllers
         //These are needed for dependency injection
         private IUserService _users;
         private IStockHelperService _stockServiceHelper;
-        //private  ITransactionService _transactionService;
 
         public UsersController(IUserService users, IStockHelperService stockServiceHelper)
         {

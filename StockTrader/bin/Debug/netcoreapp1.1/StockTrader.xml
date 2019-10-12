@@ -54,39 +54,39 @@
              </remarks>
              <param name="user"></param>
              <returns>A newly registered user</returns>
-             <response code="200">Returns the newly created item
+             <response code="200">If a user was successfully registered/created
              <example>
-             See example response:
+             Sample response:
              {
-            "userId": 1012,
-            "userName": "kinsola",
-            "userPassword": "k1",
-            "userEmail": "k0@gmail.com",
-            "userAccountBalance": 500.0,
-            "stock": [],
-            "transaction": []
-            }
+                 "userId": 1012,
+                 "userName": "kinsola",
+                 "userPassword": "k1",
+                 "userEmail": "k0@gmail.com",
+                 "userAccountBalance": 500.0,
+                 "stock": [],
+                 "transaction": []
+             }
              </example>
              </response>
              <response code="400">If a required field is missing in the request</response>       
         </member>
         <member name="M:StockTrader.Controllers.UsersController.Authenticate(StockTrader.StockTrader_Model.User)">
              <summary>
-             Creates/Registers a new user
+             Allows a user to attempt a sign-in
              </summary>
              <remarks>
              Sample request:
             
-                 POST api/v1/users/register
+                 POST api/v1/users/signin
                  {
-                    "UserName": "kingsley",
+            
                     "UserEmail": "kingsleycokei@gmail.com",
                     "UserPassword": "kinso"
                  }
             
              </remarks>
              <param name="user"></param>
-             <returns>A newly registered user</returns>
+             <returns>A Token and its expiry date</returns>
              <response code="200">Returns the newly created item</response>
              <response code="400">If a required field is missing in the request</response>   
         </member>

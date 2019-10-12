@@ -43,10 +43,10 @@ namespace StockTrader
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().AddControllersAsServices();
-            //services.AddDbContext<StockTraderDbContext>(options => options.UseInMemoryDatabase());
-            var connection = @"Server=HQ-IT-19116\SQLSERVERDEV;Database=StockTrader;User Id=kinso; Password=kinso;ConnectRetryCount=5";
+            services.AddDbContext<StockTraderContext>(options => options.UseInMemoryDatabase());
+            //var connection = @"Server=HQ-IT-19116\SQLSERVERDEV;Database=StockTrader;User Id=kinso; Password=kinso;ConnectRetryCount=5";
             //var connection = Configuration.GetSection("ConnectionStrings").GetSection("DefaultConnection").Value;
-            services.AddDbContext<StockTraderContext>(options => options.UseSqlServer(connection));
+            //services.AddDbContext<StockTraderContext>(options => options.UseSqlServer(connection));
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddSingleton<IUserService, UserService>();
             services.AddSingleton<IStockService, StockService>();

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "9264a776552769e1b4bf3c5b6d4be8fe16b870b6"
+    "signature": "bec9ae122e3778b5547f590df9f63f26b117be22"
   },
   "compilationOptions": {
     "defines": [
@@ -46,9 +46,7 @@
           "Newtonsoft.Json": "12.0.2",
           "StockTrader.Model": "1.0.0",
           "StockTrader.Service": "1.0.0",
-          "Swashbuckle.AspNetCore": "3.0.0",
-          "System.IO.FileSystem": "4.3.0",
-          "System.Xml.XPath.XDocument": "4.3.0"
+          "Swashbuckle.AspNetCore": "3.0.0"
         },
         "runtime": {
           "StockTrader.dll": {}
@@ -2102,7 +2100,7 @@
           "NSwag.Generation": "13.1.3",
           "NSwag.Generation.AspNetCore": "13.1.3",
           "System.IO.FileSystem": "4.3.0",
-          "System.Xml.XPath.XDocument": "4.3.0"
+          "System.Xml.XPath.XDocument": "4.0.1"
         },
         "runtime": {
           "lib/netstandard1.6/NSwag.AspNetCore.dll": {
@@ -2268,7 +2266,7 @@
           "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.1.8",
           "NETStandard.Library": "2.0.3",
           "Swashbuckle.AspNetCore.Swagger": "3.0.0",
-          "System.Xml.XPath": "4.3.0"
+          "System.Xml.XPath": "4.0.1"
         },
         "runtime": {
           "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.dll": {
@@ -2983,50 +2981,6 @@
           }
         }
       },
-      "System.Xml.XPath/4.3.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.IO": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0",
-          "System.Xml.ReaderWriter": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.3/System.Xml.XPath.dll": {
-            "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.6.24705.1"
-          }
-        },
-        "compile": {
-          "ref/netstandard1.3/System.Xml.XPath.dll": {}
-        }
-      },
-      "System.Xml.XPath.XDocument/4.3.0": {
-        "dependencies": {
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Linq": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0",
-          "System.Xml.ReaderWriter": "4.3.0",
-          "System.Xml.XDocument": "4.3.0",
-          "System.Xml.XPath": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {
-            "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.6.24705.1"
-          }
-        },
-        "compile": {
-          "ref/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
-        }
-      },
       "StockTrader.Model/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "1.1.6",
@@ -3104,7 +3058,7 @@
           "System.Threading.Thread": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0",
-          "System.Xml.XPath.XDocument": "4.3.0",
+          "System.Xml.XPath.XDocument": "4.0.1",
           "System.Xml.XmlDocument": "4.3.0"
         },
         "compile": {
@@ -4470,6 +4424,40 @@
           "ref/netstandard1.3/System.Threading.ThreadPool.dll": {}
         },
         "compileOnly": true
+      },
+      "System.Xml.XPath/4.0.1": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Xml.ReaderWriter": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Xml.XPath.dll": {}
+        },
+        "compileOnly": true
+      },
+      "System.Xml.XPath.XDocument/4.0.1": {
+        "dependencies": {
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Xml.ReaderWriter": "4.3.0",
+          "System.Xml.XDocument": "4.3.0",
+          "System.Xml.XPath": "4.0.1"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
+        },
+        "compileOnly": true
       }
     }
   },
@@ -5585,20 +5573,6 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
-    "System.Xml.XPath/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-YnqLK4N0Wa3s5kAcpRtdugSBY0z2/lKasKnSonlzNHM+ZC8Qb7i+DcTVraS7EL1OADvkfyVnE4NnV/sbAbjMYg==",
-      "path": "system.xml.xpath/4.3.0",
-      "hashPath": "system.xml.xpath.4.3.0.nupkg.sha512"
-    },
-    "System.Xml.XPath.XDocument/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ZMQc1GL1yO/y3mZfb0uaUTtLTp5lsbIe/7pl58/RgpErm3AEIFKKFcWDsAlJqKF/mz6hBYqZ9dFo3aLGHecZXA==",
-      "path": "system.xml.xpath.xdocument/4.3.0",
-      "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
-    },
     "StockTrader.Model/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -6350,6 +6324,20 @@
       "sha512": "sha512-k/+g4b7vjdd4aix83sTgC9VG6oXYKAktSfNIJUNGxPEj7ryEOfzHHhfnmsZvjxawwcD9HyWXKCXmPjX8U4zeSw==",
       "path": "system.threading.threadpool/4.3.0",
       "hashPath": "system.threading.threadpool.4.3.0.nupkg.sha512"
+    },
+    "System.Xml.XPath/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UWd1H+1IJ9Wlq5nognZ/XJdyj8qPE4XufBUkAW59ijsCPjZkZe0MUzKKJFBr+ZWBe5Wq1u1d5f2CYgE93uH7DA==",
+      "path": "system.xml.xpath/4.0.1",
+      "hashPath": "system.xml.xpath.4.0.1.nupkg.sha512"
+    },
+    "System.Xml.XPath.XDocument/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FLhdYJx4331oGovQypQ8JIw2kEmNzCsjVOVYY/16kZTUoquZG85oVn7yUhBE2OZt1yGPSXAL0HTEfzjlbNpM7Q==",
+      "path": "system.xml.xpath.xdocument/4.0.1",
+      "hashPath": "system.xml.xpath.xdocument.4.0.1.nupkg.sha512"
     }
   }
 }
