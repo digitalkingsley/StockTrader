@@ -17,12 +17,9 @@ namespace StockTrader.Service.DataService
 
         private string _transactionDescription;
 
-        private StockHelperService _stockHelperService;
-
-        public TransactionService(StockTraderContext context, StockHelperService stockTraderHelperService)
+        public TransactionService(StockTraderContext context)
         {
             _context = context;
-            _stockHelperService = stockTraderHelperService;
         }
 
         //This records a transaction relating to either of the addition of a brand new security to the user's portfolio
