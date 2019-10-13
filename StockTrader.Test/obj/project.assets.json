@@ -4789,7 +4789,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.1",
         "dependencies": {
+          "Microsoft.AspNetCore": "1.1.7",
           "Microsoft.EntityFrameworkCore": "1.1.6",
+          "Microsoft.EntityFrameworkCore.InMemory": "1.1.6",
           "Microsoft.EntityFrameworkCore.Relational": "1.1.6",
           "Microsoft.NETCore.App": "1.1.2"
         },
@@ -13072,6 +13074,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 1.1.6",
       "Microsoft.EntityFrameworkCore.InMemory >= 1.1.6",
       "Microsoft.EntityFrameworkCore.Tools >= 1.1.6",
+      "Microsoft.Extensions.DependencyInjection >= 2.0.0",
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Moq >= 4.7.63",
@@ -13179,6 +13182,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.1.6, )"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",

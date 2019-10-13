@@ -14,41 +14,39 @@ namespace StockTrader.Test
     public class UserServiceTest
     {
         //Seed the InMemory Db with data
-   
-        private StockTraderContext SeedContextWithSomeData()
+        StockTraderContext context;
+        private StockTraderContext GetContextWithData()
         {
             var options = new DbContextOptionsBuilder<StockTraderContext>()
-                   .UseInMemoryDatabase(Guid.NewGuid().ToString())
-                   .Options;
-            var context = new StockTraderContext(options);
+                              .UseInMemoryDatabase(Guid.NewGuid().ToString())
+                              .Options;
+             context = new StockTraderContext(options);
 
-            //Add some Seed data to the Db
-            context.User.AddRange(new User
+            context.AddRange(new User
             {
                 UserId=1,
-                UserEmail="k1@gmail.com",
-                UserName="kinso1",
-                UserPassword="kinso1"
+                UserEmail="kingso@gmail.com",
+                UserPassword="kinso"
             },
             new User
             {
-                UserId=2,
-                UserEmail = "k2@gmail.com",
-                UserName = "kinso2",
+                UserId = 2,
+                UserEmail = "kingso2@gmail.com",
                 UserPassword = "kinso2"
-            }     
+            }
             );
+
+            context.SaveChanges();
+
             return context;
         }
 
         [Fact(DisplayName = "Method should return a registered user")]
         public void Authenticate_User()
         {
-
-            var theContext = SeedContextWithSomeData();
-
-            Mock<TransactionService> transactionServiceMock = new Mock<TransactionService>();
-            UserService userService = new UserService(theContext, transactionServiceMock.Object);
+            StockTraderContext context = GetContextWithData();
+            Mock<TransactionService> transactionServiceMock = new Mock<TransactionService>(context);
+            UserService userService = new UserService(context, transactionServiceMock.Object);
 
             //Create a User Object to be authenticated
             var userToAuthenticate = new User
