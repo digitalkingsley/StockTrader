@@ -1,7 +1,8 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 
 
 namespace StockTrader.StockTrader_Model
@@ -12,15 +13,39 @@ namespace StockTrader.StockTrader_Model
         public virtual DbSet<Transaction> Transaction { get; set; }
         public virtual DbSet<User> User { get; set; }
 
+
+        //You'll need to comment-out this section when you want to use Dependency Injection to configure StockTrader Context Options.
+        //The services.AddDbContext method in the Startup.cs file will be used in that case, instead.
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
-        //    optionsBuilder.UseSqlServer(@"Server=HQ-IT-19116\SQLSERVERDEV; Database=StockTrader; User Id=kinso; Password=kinso;");
+        //    optionsBuilder.UseInMemoryDatabase(Guid.NewGuid().ToString());
         //}
-        public StockTraderContext(DbContextOptions<StockTraderContext> options) : base(options) { }
 
-        public StockTraderContext()
+        public StockTraderContext(DbContextOptions<StockTraderContext> options) : base(options)
         {
+            //Add some Seed data to the Db. If you're not running Unit Tests, please comment-out this block of code,
+            //leaving this constructor without any implementation.
+            //var context = new StockTraderContext(options);
+            //context.User.AddRange(new User
+            //{
+            //    UserId = 1,
+            //    UserEmail = "k1@gmail.com",
+            //    UserName = "kinso1",
+            //    UserPassword = "kinso1"
+            //},
+            //new User
+            //{
+            //    UserId = 2,
+            //    UserEmail = "k2@gmail.com",
+            //    UserName = "kinso2",
+            //    UserPassword = "kinso2"
+            //}
+            //);
         }
+
+        //public StockTraderContext()
+        //{
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

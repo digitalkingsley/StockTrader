@@ -4645,7 +4645,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.1",
         "dependencies": {
+          "Microsoft.AspNetCore": "1.1.7",
           "Microsoft.EntityFrameworkCore": "1.1.6",
+          "Microsoft.EntityFrameworkCore.InMemory": "1.1.6",
           "Microsoft.EntityFrameworkCore.Relational": "1.1.6",
           "Microsoft.NETCore.App": "1.1.2"
         },
