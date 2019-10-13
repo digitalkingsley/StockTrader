@@ -30,13 +30,4 @@ namespace StockTrader.StockTrader_Model
         public virtual ICollection<Transaction> Transaction { get; set; }
     }
 
-    /// <summary>
-    /// Every in-coming request-body to fund a user's account must be an object of this type 
-    /// </summary>
-    public class IncomingFund
-    {
-        public string Email { get; set; }
-
-        public double Amount { get; set; }
-    }
 }
