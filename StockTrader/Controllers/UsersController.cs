@@ -24,14 +24,17 @@ namespace StockTrader.Controllers
     [Route("api/v1/[controller]")]
     public class UsersController : ControllerBase
     {
-        //These are needed for dependency injection
+
+      //These are needed for dependency injection
+        private StockTraderContext _context;
         private IUserService _users;
         private IStockHelperService _stockServiceHelper;
 
-        public UsersController(IUserService users, IStockHelperService stockServiceHelper)
+        public UsersController(IUserService users, IStockHelperService stockServiceHelper, StockTraderContext context)
         {
            _users = users;
            _stockServiceHelper = stockServiceHelper;
+           _context = context;
         }
 
 
@@ -74,9 +77,15 @@ namespace StockTrader.Controllers
             {
                 try
                 {
-                   await _users.Register(user);
-                   return Ok(user);
-
+                  string result = await _users.Register(user, _context);
+                    if (result == "success")
+                    {
+                        return Ok(user);
+                    }
+                    else
+                    {
+                        return Content("exists");
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -114,8 +123,7 @@ namespace StockTrader.Controllers
         {
             try
             {
-
-                var report = _users.Authenticate(user);
+                var report = _users.Authenticate(user, _context);
 
                 if (report == "success")
                 {
@@ -145,10 +153,9 @@ namespace StockTrader.Controllers
         [HttpPost("account/fund")]
         public async Task<IActionResult> FundAccount([FromBody] double amount)
         {
-
             string eMail = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
-            string transactionReport = await _users.FundAccount(amount, eMail);
+            string transactionReport = await _users.FundAccount(amount, eMail, _context);
             if (transactionReport == "success")
             {
                 return Ok("Success");

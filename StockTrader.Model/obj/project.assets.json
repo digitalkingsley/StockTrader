@@ -9017,6 +9017,7 @@
       "Microsoft.EntityFrameworkCore.InMemory >= 1.1.6",
       "Microsoft.EntityFrameworkCore.Relational >= 1.1.6",
       "Microsoft.EntityFrameworkCore.Tools >= 1.1.6",
+      "Microsoft.Extensions.DependencyInjection >= 1.1.1",
       "Microsoft.NETCore.App >= 1.1.2"
     ]
   },
@@ -9079,6 +9080,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[1.1.6, )"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[1.1.1, )"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",

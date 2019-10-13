@@ -8,10 +8,10 @@ namespace StockTrader.Service.InfrastructureService
 {
   public interface IUserService
     {
-        Task Register(User user);
+        Task<string> Register(User user, StockTraderContext context);
 
-        string Authenticate(User user);
+        string Authenticate(User user, StockTraderContext context);
 
-        Task<string> FundAccount(double amount, string userEmail);
+        Task<string> FundAccount(double amount, string userEmail, StockTraderContext context);
     }
 }

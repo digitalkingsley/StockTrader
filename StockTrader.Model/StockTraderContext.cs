@@ -23,29 +23,12 @@ namespace StockTrader.StockTrader_Model
 
         public StockTraderContext(DbContextOptions<StockTraderContext> options) : base(options)
         {
-            //Add some Seed data to the Db. If you're not running Unit Tests, please comment-out this block of code,
-            //leaving this constructor without any implementation.
-            //var context = new StockTraderContext(options);
-            //context.User.AddRange(new User
-            //{
-            //    UserId = 1,
-            //    UserEmail = "k1@gmail.com",
-            //    UserName = "kinso1",
-            //    UserPassword = "kinso1"
-            //},
-            //new User
-            //{
-            //    UserId = 2,
-            //    UserEmail = "k2@gmail.com",
-            //    UserName = "kinso2",
-            //    UserPassword = "kinso2"
-            //}
-            //);
+        
         }
 
-        //public StockTraderContext()
-        //{
-        //}
+        public StockTraderContext()
+        {
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

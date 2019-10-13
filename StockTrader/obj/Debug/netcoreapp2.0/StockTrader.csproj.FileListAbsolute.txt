@@ -1,0 +1,4 @@
+C:\StockTrader\StockTrader\StockTrader\obj\Debug\netcoreapp2.0\StockTrader.csproj.CoreCompileInputs.cache
+C:\StockTrader\StockTrader\StockTrader\obj\Debug\netcoreapp2.0\StockTrader.AssemblyInfoInputs.cache
+C:\StockTrader\StockTrader\StockTrader\obj\Debug\netcoreapp2.0\StockTrader.AssemblyInfo.cs
+C:\StockTrader\StockTrader\StockTrader\obj\Debug\netcoreapp2.0\StockTrader.csprojAssemblyReference.cache

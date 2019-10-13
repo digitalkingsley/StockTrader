@@ -12,15 +12,12 @@ namespace StockTrader.Service.DataService
 {
    public class UserService: IUserService
     {
-        //Use Dependency Injection to inject components
-        private StockTraderContext _context;
+       
         private ITransactionService _transactionService;
 
-        public UserService(StockTraderContext context, ITransactionService transactionService)
+        public UserService(ITransactionService transactionService)
         {
-            _context = context;
             _transactionService = transactionService;
-
         }
 
         /// <summary>
@@ -28,17 +25,18 @@ namespace StockTrader.Service.DataService
         /// </summary>
         /// <param name="user"></param>
         #region Method To Register A New User
-        public async Task Register(User user)
+        public async Task<string> Register(User user, StockTraderContext context)
         {
-            var existingUser = _context.User.FirstOrDefault(u => u.UserEmail == user.UserEmail);
+            var existingUser = context.User.FirstOrDefault(u => u.UserEmail == user.UserEmail);
             if (existingUser == null)
             {
-              await _context.User.AddAsync(user);
-              await  _context.SaveChangesAsync();
+              await context.User.AddAsync(user);
+              await  context.SaveChangesAsync();
+              return "success";
             }
             else
             {
-                throw new Exception("User Already Exists");
+                return "User Already Exists";
             }
         }
         #endregion
@@ -49,13 +47,13 @@ namespace StockTrader.Service.DataService
         /// <param name="user"></param>
         /// <returns>Method returns a string</returns>
         #region Method To Authenticate A User
-        public string Authenticate(User user)
+        public string Authenticate(User user, StockTraderContext context)
         {
             if(string.IsNullOrEmpty(user.UserEmail) || string.IsNullOrEmpty(user.UserPassword))
             {
                 throw new Exception("No Email or Password supplied");
             }
-            var _user = _context.User.FirstOrDefault(u => u.UserEmail == user.UserEmail && u.UserPassword==user.UserPassword);
+            var _user = context.User.FirstOrDefault(u => u.UserEmail == user.UserEmail && u.UserPassword==user.UserPassword);
 
            if(_user==null)
             {
@@ -69,7 +67,7 @@ namespace StockTrader.Service.DataService
         #endregion
 
         #region Method To Fund User Account
-        public async Task<string> FundAccount(double amount, string email)
+        public async Task<string> FundAccount(double amount, string email, StockTraderContext context)
         {
             if (string.IsNullOrEmpty(amount.ToString()))
             {
@@ -77,7 +75,7 @@ namespace StockTrader.Service.DataService
             }
             else
             {
-                User _user = _context.User.FirstOrDefault(u => u.UserEmail == email);
+                User _user = context.User.FirstOrDefault(u => u.UserEmail == email);
                 if (_user == null)
                 {
                     throw new Exception("User Not Found");
@@ -86,11 +84,11 @@ namespace StockTrader.Service.DataService
                 {
                     _user.UserAccountBalance += amount;
                     //Register this transaction
-                    Transaction transactionReport = await _transactionService.AddTransactionForFunding(amount, _user, _context, "funding");
+                    Transaction transactionReport = await _transactionService.AddTransactionForFunding(amount, _user, context, "funding");
 
                     if (transactionReport != null)
                     {
-                        await _context.SaveChangesAsync();
+                        await context.SaveChangesAsync();
                         return "success";
                     }
                     else
