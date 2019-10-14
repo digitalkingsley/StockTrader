@@ -4,6 +4,14 @@ dist: trusty
 
 mono: none
 
+sources:
+- sourceline: 'deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-trusty-prod trusty main'
+  key_url: 'https://packages.microsoft.com/keys/microsoft.asc'
+
+packages:
+- dotnet-hostfxr-1.0.1
+- dotnet-sharedframework-microsoft.netcore.app-1.1.2
+
 dotnet: 1.1.2
 
 script:
